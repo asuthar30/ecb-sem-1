@@ -1,32 +1,14 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<conio.h>
+int main(){
+    int number;
 
-#include <conio.h>
+    printf("enter any number :");
+    scanf("%d", &number);
 
-#include <stdlib.h>
-
-void main()
-
-{
-
-     system("cls"); 
-
-    int a, b;
-
-        printf("a= ");
-
-    scanf("%d", &a);
-
-    printf("b= ");
-
-    scanf("%d", &b);
-
-    if (a > b)
-
-        printf("a is max");
-
+    if (number%2==0)
+        printf("given number is even");
     else
-
-        printf("b is max");
-
-    getch();
+        printf("given number is odd");
+return 0;
 }
