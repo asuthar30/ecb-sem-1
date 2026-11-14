@@ -1,13 +1,24 @@
 #include<stdio.h>
 #include<conio.h>
+void swap(int *x, int *y)
+{
+    int z;
+    z=*x;
+    *x=*y;
+    *y=z;
+}
+
 int main()
 {
-    int length, width, area;
-    printf("enter the lenght of triangle: ");
-    scanf("%d", &length);
-    printf("enter the width of traingle: ");
-    scanf("%d",&width);
-    area=length*width;
-    printf("area of triangle is : %d", area);
-    getch();
-}
+    int a=10,b=20;
+
+    printf("before swaping\n");
+    printf("a= %d\n b= %d\n ", a,b);
+    swap(&a,&b);
+
+    printf("after swaping\n");
+    printf("a= %d \n b= %d ",a,b);
+
+    return 0;
+
+}       +
