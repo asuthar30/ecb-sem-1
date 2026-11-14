@@ -1,16 +1,28 @@
 const bookinput = document.getElementById("bookinput");
-//const authorinput = document.getElementById("authorinput");
-//const copiesinput = document.getElementById("copiesinput");
+const authorinput = document.getElementById("authorinput");
+const copiesinput = document.getElementById("copiesinput");
 const button = document.getElementById("addbutton");
-const output = document.getElementById("output");
 
 button.addEventListener("click" , function() {
-    const name = bookinput.value; 
-   
-    output.textContent = name;
+    const bookname = bookinput.value; 
+    const authorname = authorinput.value;
+    const copies =copiesinput.value;
+
    
     
+
+
+const tablebody = document.getElementById("booklist");
+
+const row = tablebody.insertRow();
+row.insertCell().textContent = bookname.trim();
+row.insertCell().textContent = authorname.trim();
+row.insertCell().textContent = copies.trim();
+
+
+bookinput.value = "";
+authorinput.value = "";
+copiesinput.value = "";
+
 });
-
-
 
