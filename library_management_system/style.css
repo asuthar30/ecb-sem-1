@@ -1,0 +1,16 @@
+.table {
+    margin-left: 40%;
+    margin-top: 100;
+    width:max-content;
+    
+}
+
+body {
+    margin: 0;
+}
+
+.heading {
+    background-color: bisque;
+    height: 50;
+    font-family: cursive;
+}
