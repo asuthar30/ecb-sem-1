@@ -8,9 +8,11 @@ button.addEventListener("click" , function() {
     const authorname = authorinput.value;
     const copies =copiesinput.value;
 
-   
-    
-
+    if (!bookname.trim() || !authorname.trim() || !copies.trim())
+    { 
+        alert("fill every box");
+        return;
+    }
 
 const tablebody = document.getElementById("booklist");
 
