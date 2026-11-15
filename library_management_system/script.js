@@ -3,6 +3,20 @@ const authorinput = document.getElementById("authorinput");
 const copiesinput = document.getElementById("copiesinput");
 const button = document.getElementById("addbutton");
 
+let books = JSON.parse(localStorage.getItem("books")) || [];
+
+
+const tablebody = document.getElementById("booklist");
+
+books.forEach(function(book){
+const row = tablebody.insertRow();
+row.insertCell().textContent = book.name;
+row.insertCell().textContent = book.author;
+row.insertCell().textContent = book.copies;
+
+});
+
+
 button.addEventListener("click" , function() {
     const bookname = bookinput.value; 
     const authorname = authorinput.value;
@@ -13,6 +27,12 @@ button.addEventListener("click" , function() {
         alert("fill every box");
         return;
     }
+    books.push({
+        name: bookname.trim(),
+        author: authorname.trim(),
+        copies: copies.trim()
+    });
+    localStorage.setItem("books", JSON.stringify(books));
 
 const tablebody = document.getElementById("booklist");
 
